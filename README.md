@@ -6,12 +6,7 @@ Projeto PI - SEMI-PRESENCIAL
 
 Projeto Zoológico
 
-Camila
-Eduardo
-Filipe
-João Paulo 
-Luana de Sousa Amaral
-Rafael
+Camila, Eduardo, Filipe, João, Luana, Rafael
 
 Santo André
 2015
