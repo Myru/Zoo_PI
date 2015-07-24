@@ -1,0 +1,5 @@
+100	Kurt Cobain	4537-5365	Funcionario do zoologico
+200	Johnny Cash	4356-9876	Funcionario do zoologico
+300	Jimi Hendrix	4536-4352	Veterinario
+400	Ozzy Osbourne	4536-1436	Nutricionista
+500	Jim Morrison	4530-9678	Funcionario do zoologico

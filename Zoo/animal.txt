@@ -1,0 +1,5 @@
+1	Urso Pardo	Peixe, preferencialmente salmao	4	8h e 16h
+2	Panda Gigante	Folhas de Eucalipto	3	9h e 17h
+3	Leopardo das Neves	Carne de Lebre	5	18h
+4	Lobo-Cinzento	Carne em geral	2	16h
+5	Gorila das Montanhas	Frutas e Folhas	3	15h
