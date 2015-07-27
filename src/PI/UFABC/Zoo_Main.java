@@ -100,7 +100,7 @@ public class Zoo_Main {
             System.out.println("Dados salvos com sucesso");
             teclado.next();
         } catch (IOException erro) {
-            System.out.println("Ocorreu um erro ao salvar arquivos");
+            System.out.println("Erro ao salvar arquivos");
         }
     }
 
@@ -225,7 +225,7 @@ public class Zoo_Main {
             }
             brLimp.close();
         } catch (IOException erro) {
-            System.out.println("Ocorreu um erro ao carregar as informação");
+            System.out.println("Erro ao carregar as informação");
         }
     }
 
@@ -236,21 +236,21 @@ public class Zoo_Main {
             flag = 0; //zerando variavel de controle
 
             System.out.println("\n\n\n"); // espacos
-            System.out.println("CONTROLE DE ANIMAIS");
-            System.out.println("1- Cadastrar Animal");
-            System.out.println("2- Retirar Animal");
-            System.out.println("3- Buscar Animal");
-            System.out.println("4- Alterar Animal");
-            System.out.println("5- Exibir Animais");
-            System.out.println("6- Sair");
-            System.out.print("Escolha opcao desejada: ");
+            System.out.println("MENU ANIMAIS");
+            System.out.println("1- Novo Registro");
+            System.out.println("2- Apagar Registro");
+            System.out.println("3- Procurar Registro");
+            System.out.println("4- Modificar Registro");
+            System.out.println("5- Listar Registros");
+            System.out.println("6- Voltar");
+            System.out.print("Selecione a opção: ");
             opmenu = teclado.nextInt(); // entrada de uma das 6 opcoes
 
             if (opmenu == 1) { // Se o usuario apertou 1 entrara no menu de Cadstro de Animal
                 if (contAni <= 50) { // so entrara se o contador nao excedeu o limite do vetor
-                    System.out.println("\nCADASTRAR ANIMAL");
+                    System.out.println("\nNOVO REGISTRO");
 
-                    System.out.print("Codigo do animal: ");
+                    System.out.print("NUMERO DE CHAMADA: ");
                     aux = teclado.next(); // entra com um codigo qualquer para o animal
 
                     /* laco para verificar se o Codigo ja existe na matriz
@@ -261,7 +261,7 @@ public class Zoo_Main {
                     while (i <= contAni && flag == 0) {
                         // variavel.equals() -> comando de comparacao de string
                         if (aux.equals(animal[i][0])) { // se o codigo ja existir na coluna [0]
-                            System.out.println("CODIGO INVALIDO");
+                            System.out.println("ERRO !!! CODIGO INVALIDO");
                             flag = 1; // flag para sair do laco
                         } /*se o laco percorrer todo conteudo da coluna [0] e nao encontrar
                          * nenhum registro repetido é adicionado o conteudo de aux
@@ -278,13 +278,13 @@ public class Zoo_Main {
                      */
                     if (flag == 0) {
                         // entrada de dados na matriz
-                        System.out.print("Nome do animal: ");
+                        System.out.print("Nome popular do animal : ");
                         animal[contAni][1] = teclado.next();
-                        System.out.print("Comida que ele se alimenta: ");
+                        System.out.print("Tipo de alimentação: ");
                         animal[contAni][2] = teclado.next();
-                        System.out.print("Quantidade de comida que ele se alimenta (Kg/dia): ");
+                        System.out.print("Quantidade, em kg, de alimento e frequencia (Kg/dia): ");
                         animal[contAni][3] = teclado.next();
-                        System.out.print("Horario da alimentacao: ");
+                        System.out.print("Horario tipico: ");
                         animal[contAni][4] = teclado.next();
 
                         /* avança para o proximo indice da matriz, indicando que o cadastro
@@ -302,12 +302,12 @@ public class Zoo_Main {
 
 
             if (opmenu == 2) { // Se o usuario apertou 2 entrara no menu de Excluir de Animal
-                System.out.println("\nEXCLUIR ANIMAL");
+                System.out.println("\n APAGAR REGISTRO");
 
                 /*Nesse momento o usuario podera excluir um dos animais catalogados
                  * Para isso, ele tera que digitar o codigo do animal
                  */
-                System.out.print("Digite o codigo do animal a ser retirado: ");
+                System.out.print("Digite o Nº de chamada a ser retirado: ");
                 aux = teclado.next();
 
                 while (i <= contAni && flag == 0) { // mesmo codigo anterior
@@ -327,10 +327,10 @@ public class Zoo_Main {
                         }
                         contAni--; // retrocede o contador um indice
                         flag = 1; // flag para saida do laco
-                        System.out.println("ANIMAL RETIRADO");
+                        System.out.println("REGISTRO APAGADO");
 
                     } else if (i == contAni) { // se o laco chegar no final da coluna[0]
-                        System.out.println("ANIMAL NÃO EXISTE!");
+                        System.out.println("REGISTRO NÃO EXISTE!!!");
                     }
                     i++; // incremento do laco externo
                 }
@@ -338,22 +338,22 @@ public class Zoo_Main {
             }
 
             if (opmenu == 3) { // Buscar Animal
-                System.out.println("\nBUSCAR ANIMAL");
-                System.out.print("Digite o codigo do animal a ser buscado: ");
+                System.out.println("\n PROCURAR REGISTRO");
+                System.out.print("Digite o Nº de chamada da procura: ");
                 aux = teclado.next();
 
                 while (i <= contAni && flag == 0) {
                     if (aux.equals(animal[i][0])) { // se o codigo existir na coluna[0]
                         //é exibido todas as informcoes do animal buscado
-                        System.out.println("Nome do animal: " + animal[i][1]);
-                        System.out.println("Comida que se alimenta: " + animal[i][2]);
-                        System.out.println("Quantidade de comida que se alimenta (gramas): " + animal[i][3]);
-                        System.out.println("Horario da alimentacao: " + animal[i][4]);
-                        System.out.println("Operacao realizada com exito!");
+                        System.out.println("Nome popular do animal: " + animal[i][1]);
+                        System.out.println("Tipo de alimentação: " + animal[i][2]);
+                        System.out.println("Quantidade de alimento (em KG) e frequencia: " + animal[i][3]);
+                        System.out.println("Horario tiico: " + animal[i][4]);
+                        System.out.println("Operacao realizada com sucesso!");
                         flag = 1; // flag para saida do laco
 
                     } else if (i == contAni) { // se o laco chegar no final da matriz
-                        System.out.println("ANIMAL NÃO EXISTE");
+                        System.out.println("REGISTRO NÃO EXISTE");
                     }
                     i++;
                 }
@@ -361,29 +361,29 @@ public class Zoo_Main {
             }
 
             if (opmenu == 4) { // Alterar animal
-                System.out.println("\nALTERAR ANIMAL");
+                System.out.println("\nMODIFICAR REGISTRO");
                 // Menu de alteracao de informacoes de um animal
                 // Codigo do animal nao podera ser mudado!
-                System.out.print("Digite o numero do animal a ser alterado: ");
+                System.out.print("Digite o Nº de chamada a ser alterado: ");
                 aux = teclado.next();
 
                 while (i <= contAni && flag == 0) {
                     if (aux.equals(animal[i][0])) { // se o codigo existir na matriz
 
                         // Exibe o conteudo atual antes de muda-lo
-                        System.out.print("Novo nome do animal [" + animal[i][1] + "]: ");
+                        System.out.print("Novo nome popular do animal [" + animal[i][1] + "]: ");
                         animal[i][1] = teclado.next();
-                        System.out.print("Nova comida que se alimenta [" + animal[i][2] + "]: ");
+                        System.out.print("Novo tipo de alimentação que se alimenta [" + animal[i][2] + "]: ");
                         animal[i][2] = teclado.next();
-                        System.out.print("Nova quantidade de comida que se alimenta (gramas)[" + animal[i][3] + "]: ");
+                        System.out.print("Nova quantidade e frequencia de alimentacao (KG)[" + animal[i][3] + "]: ");
                         animal[i][3] = teclado.next();
-                        System.out.print("Horario da alimentacao [" + animal[i][4] + "]: ");
+                        System.out.print("Horario da Tipico [" + animal[i][4] + "]: ");
                         animal[i][4] = teclado.next();
-                        System.out.println("Operacao realizada com exito!");
+                        System.out.println("Operacao realizada com Sucesso!");
                         flag = 1; // flag para saida do laco
 
                     } else if (i == contAni) { // se o laco chegar no final da matriz
-                        System.out.println("ANIMAL NÃO EXISTE");
+                        System.out.println("REGISTRO NÃO ENCONTRADO");
                     }
                     i++;
                 }
@@ -391,22 +391,22 @@ public class Zoo_Main {
             }
 
             if (opmenu == 5) { // Exibir todos os elementos cadastrados na matriz
-                System.out.println("\nEXIBIR ANIMAIS");
+                System.out.println("\nEXIBIR REGISTROS");
                 for (i = 0; i < contAni; i++) { // percorre ate o ultimo elemento
-                    System.out.println("Numero do animal: " + animal[i][0]);
-                    System.out.println("Nome do animal: " + animal[i][1]);
-                    System.out.println("Comida que se alimenta: " + animal[i][2]);
-                    System.out.println("Quantidade de comida que ele se alimenta (gramas): " + animal[i][3]);
-                    System.out.println("Horario da alimentacao: " + animal[i][4] + "\n");
+                    System.out.println("Numero de chamada: " + animal[i][0]);
+                    System.out.println("Nome Popular do animal: " + animal[i][1]);
+                    System.out.println("Tipo de Alimentação: " + animal[i][2]);
+                    System.out.println("Quantidade e Frequencia de alimentação (KG/dia): " + animal[i][3]);
+                    System.out.println("Horario da Tipico: " + animal[i][4] + "\n");
                 }
 
-                System.out.println("Operacao realizada com exito!");
+                System.out.println("Operacao realizada com Sucesso!");
                 teclado.next();
             }
 
             // caso o usuario nao entre com nenhum dos numeros indicados no menu CONTROLE DE ANIMAIS
             if (opmenu != 1 && opmenu != 2 && opmenu != 3 && opmenu != 4 && opmenu != 5 && opmenu != 6) {
-                System.out.println("Opcao Invalida");
+                System.out.println(" ERRO!! Opcao Invalida");
                 teclado.next();
             }
         } while (opmenu != 6); // ... enquanto opmenu nao for 6
