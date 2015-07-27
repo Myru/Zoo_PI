@@ -422,25 +422,25 @@ public class Zoo_Main {
             i = 0;
             flag = 0;
             System.out.println("\n\n\n");
-            System.out.println("CONTROLE DE FUNCIONARIOS E PARCEIROS");
-            System.out.println("1- Novo profissional");
-            System.out.println("2- Excluir profissional");
-            System.out.println("3- Buscar profissional");
-            System.out.println("4- Alterar profissional");
-            System.out.println("5- Exibir profissionais");
-            System.out.println("6- Sair");
+            System.out.println("MENU FUNCIONARIOS");
+            System.out.println("1- Novo Cadastro");
+            System.out.println("2- Apagar Cadastro");
+            System.out.println("3- Procurar Cadastro");
+            System.out.println("4- Alterar Cadastro");
+            System.out.println("5- Exibir Cadastros");
+            System.out.println("6- Voltar");
             System.out.print("Escolha opcao desejada: ");
             opmenu = teclado.nextInt();
 
             if (opmenu == 1) { // Novo Profissional
                 if (contFunc <= 50) {
-                    System.out.println("\nNOVO PROFISSIONAL");
-                    System.out.print("Digite o CPF: ");
+                    System.out.println("\nNOVO CADASTRO");
+                    System.out.print("INFORME CPF: ");
                     aux = teclado.next();
 
                     while (i <= contFunc && flag == 0) {
                         if (aux.equals(func[i][0])) {
-                            System.out.println("CPF EXISTENTE NO REGISTRO");
+                            System.out.println("JA EXISTE ESTE Nº DE CPF NO CADASTRO");
                             flag = 1;
                         } else if (i == contFunc) {
                             func[contFunc][0] = aux;
@@ -460,32 +460,32 @@ public class Zoo_Main {
                          * os numeros certos, o laco nao deixa ele sair
                          */
                         while (flag == 0) { // reutilizando flag
-                            System.out.println("Selecione a profissao");
-                            System.out.println("1- Funcionario do zoologico");
+                            System.out.println("Selecione a Funcao");
+                            System.out.println("1- Equipe de Apoio");
                             System.out.println("2- Nutricionista");
                             System.out.println("3- Veterinario");
                             System.out.print("Selecione: ");
                             prof = teclado.nextInt();
 
                             if (prof == 1) { // caso tenha pressionado 1
-                                func[contFunc][3] = "Funcionario do zoologico";
-                                System.out.println("Profissao: " + func[contFunc][3]);
+                                func[contFunc][3] = "Equipe de apoio";
+                                System.out.println("Funcao: " + func[contFunc][3]);
                                 flag = 1;
                             } else if (prof == 2) { // caso tenha pressionado 2
                                 func[contFunc][3] = "Nutricionista";
-                                System.out.println("Profissao: " + func[contFunc][3]);
+                                System.out.println("Funcao: " + func[contFunc][3]);
                                 flag = 1;
                             } else if (prof == 3) { // caso tenha pressionado 3
                                 func[contFunc][3] = "Veterinario";
-                                System.out.println("Profissao: " + func[contFunc][3]);
+                                System.out.println("Funcao: " + func[contFunc][3]);
                                 flag = 1;
                             } else // qualquer outro numero
                             {
-                                System.out.println("Profissao Invalida");
+                                System.out.println("Funcao Invalida");
                             }
                         }
                         contFunc++;
-                        System.out.println("Operacao realizada com exito!");
+                        System.out.println("Operacao realizada com Sucesso!!!");
                     }
                 } else {
                     System.out.println("MATRIZ CHEIA");
@@ -494,8 +494,8 @@ public class Zoo_Main {
             }
 
             if (opmenu == 2) { // Excluir profissional
-                System.out.println("\nEXCLUIR PROFISSIONAL");
-                System.out.print("Digite o CPF do profissional a ser retirado: ");
+                System.out.println("\nAPAGAR CADASTRO");
+                System.out.print("Digite o CPF do funcionario a ser apagado: ");
                 aux = teclado.next();
 
                 while (i <= contFunc && flag == 0) {
@@ -510,7 +510,7 @@ public class Zoo_Main {
                         }
                         contFunc--;
                         flag = 1;
-                        System.out.println("PROFISSIONAL RETIRADO");
+                        System.out.println("FUNICIONARIO RETIRADO");
 
                     } else if (i == contFunc) {
                         System.out.println("CPF NÃO EXISTE NA MATRIZ!");
@@ -521,20 +521,20 @@ public class Zoo_Main {
             }
 
             if (opmenu == 3) { // Buscar profissional
-                System.out.println("\nBUSCAR PROFISSIONAL");
-                System.out.print("Digite o CPF do profissional a ser buscado: ");
+                System.out.println("\nPROCURAR CADASTRO");
+                System.out.print("Digite o CPF do funcionario que deseja procurar: ");
                 aux = teclado.next();
 
                 while (i <= contFunc && flag == 0) {
                     if (aux.equals(func[i][0])) {
                         System.out.println("Nome: " + func[i][1]);
                         System.out.println("Telefone: " + func[i][2]);
-                        System.out.println("Profissao: " + func[i][3]);
-                        System.out.println("Operacao realizada com exito!");
+                        System.out.println("Funcao: " + func[i][3]);
+                        System.out.println("Operacao realizada com sucesso!!!");
                         flag = 1;
 
                     } else if (i == contFunc) {
-                        System.out.println("CPF NÃO EXISTE");
+                        System.out.println("CPF NÃO CADASTRADO");
                     }
                     i++;
                 }
@@ -542,17 +542,17 @@ public class Zoo_Main {
             }
 
             if (opmenu == 4) { // Alterar
-                System.out.println("\nALTERAR PROFISSIONAL");
+                System.out.println("\nALTERAR CADASTRO");
 
-                System.out.print("Digite o o CPF do profissional a ser alterado: ");
+                System.out.print("Digite o o CPF do funcionario a ser alterado: ");
                 aux = teclado.next();
 
                 while (i <= contFunc && flag == 0) {
                     if (aux.equals(func[i][0])) {
 
                         // Aqui primeiramente tem entrada na profissao
-                        System.out.println("Selecione a nova profissao [" + func[i][3] + "]");
-                        System.out.println("1- Funcionario do zoologico");
+                        System.out.println("Selecione a nova funcao [" + func[i][3] + "]");
+                        System.out.println("1- Equipe de Apoio");
                         System.out.println("2- Nutricionista");
                         System.out.println("3- Veterinario");
                         System.out.print("Selecione: ");
@@ -561,7 +561,7 @@ public class Zoo_Main {
                         // se as profissoes forem 1 ou 2 ou 3 prossegue ...
                         if (prof == 1 || prof == 2 || prof == 3) {
                             if (prof == 1) {
-                                func[i][3] = "Funcionario do zoologico";
+                                func[i][3] = "Equipe de Apoio";
                             }
                             if (prof == 2) {
                                 func[i][3] = "Nutricionista";
@@ -573,16 +573,16 @@ public class Zoo_Main {
                             func[i][1] = teclado.next();
                             System.out.print("Novo telefone [" + func[i][2] + "]: ");
                             func[i][2] = teclado.next();
-                            System.out.println("Operacao realizada com exito!");
+                            System.out.println("Operacao realizada com Sucesso!!!");
                         } else // ... senao, profissao invalida
                         {
-                            System.out.println("Profissao Invalida");
+                            System.out.println("Funcao Invalida");
                         }
 
                         flag = 1;
 
                     } else if (i == contFunc) {
-                        System.out.println("CPF NÃO EXISTE");
+                        System.out.println("CPF NÃO CADASTRADO");
                     }
                     i++;
                 }
@@ -590,16 +590,16 @@ public class Zoo_Main {
             }
 
             if (opmenu == 5) { // exibe todos na tela em um laco
-                System.out.println("\nEXIBIR PROFISSIONAIS");
+                System.out.println("\nEXIBIR CADASTROS");
 
                 for (i = 0; i < contFunc; i++) {
                     System.out.println("CPF: " + func[i][0]);
                     System.out.println("Nome: " + func[i][1]);
                     System.out.println("Telefone: " + func[i][2]);
-                    System.out.println("Profissao: " + func[i][3] + "\n");
+                    System.out.println("Funcao: " + func[i][3] + "\n");
                 }
 
-                System.out.println("Operacao realizada com exito!");
+                System.out.println("Operacao realizada com Sucesso!!!");
                 teclado.next();
 
             } // if opmenu == 5
@@ -618,26 +618,26 @@ public class Zoo_Main {
             flag = 0;
 
             System.out.println("\n\n\n");
-            System.out.println("CONTROLE DE JAULAS");
-            System.out.println("1- Cadastrar Jaula");
-            System.out.println("2- Retirar Jaula");
-            System.out.println("3- Buscar Jaula");
-            System.out.println("4- Alterar Jaula");
-            System.out.println("5- Exibir Jaulas");
-            System.out.println("6- Sair");
+            System.out.println("CONTROLE DE RECINTOS");
+            System.out.println("1- Cadastrar Recinto");
+            System.out.println("2- Apagar Cadastro");
+            System.out.println("3- Buscar Cadastro");
+            System.out.println("4- Alterar Cadastro");
+            System.out.println("5- Exibir Cadastros");
+            System.out.println("6- Voltar");
             System.out.print("Escolha opcao desejada: ");
             opmenu = teclado.nextInt();
 
             if (opmenu == 1) { // nova jaula
                 if (contJaula <= 50) {
-                    System.out.println("\nCADASTRAR JAULA");
+                    System.out.println("\nCADASTRAR RECINTO");
 
-                    System.out.print("Numero da jaula: ");
+                    System.out.print("Numero do Recinto: ");
                     aux = teclado.next();
 
                     while (i <= contJaula && flag == 0) {
                         if (aux.equals(jaula[i][0])) {
-                            System.out.println("EXISTE OUTRA JAULA CADASTRADA COM ESSE NÚMERO");
+                            System.out.println("EXISTE OUTRO RECINTO CADASTRADO COM ESTE NÚMERO");
                             flag = 1;
                         } else if (i == contJaula) {
                             jaula[contJaula][0] = aux;
@@ -646,12 +646,12 @@ public class Zoo_Main {
                     }
 
                     if (flag == 0) {
-                        System.out.print("Numero de animais enjaulados: ");
+                        System.out.print("Numero de animais no recinto: ");
                         jaula[contJaula][1] = teclado.next();
-                        System.out.print("Frequencia de limpeza: ");
+                        System.out.print("Frequencia de limpeza do recinto: ");
                         jaula[contJaula][2] = teclado.next();
                         contJaula++;
-                        System.out.print("Operacao realizada com exito!");
+                        System.out.print("Operacao realizada com Sucesso!!!");
                     }
                 } else {
                     System.out.println("MATRIZ CHEIA");
@@ -660,8 +660,8 @@ public class Zoo_Main {
             }
 
             if (opmenu == 2) { // retirar jaula
-                System.out.println("\nRETIRAR JAULA");
-                System.out.print("Digite o numero da jaula a ser retirado: ");
+                System.out.println("\nAPAGAR CADASTRO");
+                System.out.print("Digite o numero do recinto a ser retirado: ");
                 aux = teclado.next();
 
                 while (i <= contJaula && flag == 0) {
@@ -675,10 +675,10 @@ public class Zoo_Main {
                         }
                         contJaula--;
                         flag = 1;
-                        System.out.println("JAULA RETIRADA");
+                        System.out.println("CADASTRO EXCLUIDO");
 
                     } else if (i == contJaula) {
-                        System.out.println("NAO EXISTE JAULA CADASTRADA COM O CÓDIGO FORNECIDO");
+                        System.out.println("NAO EXISTE RECINTO COM O CÓDIGO FORNECIDO");
                     }
                     i++;
                 }
