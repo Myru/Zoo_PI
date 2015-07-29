@@ -76,6 +76,7 @@ public class Zoo_Main {
             outLimpezas.close();
 
             System.out.println("Dados salvos com sucesso!");
+            System.out.println("Aperte Enter para continuar...");
             entrada.next();
             
         } catch (IOException erro) {
@@ -218,7 +219,7 @@ public class Zoo_Main {
                         animal[contAnimal][2] = entrada.next();
                         System.out.print("Quantidade de alimento e frequência (Kg/dia): ");
                         animal[contAnimal][3] = entrada.next();
-                        System.out.print("Horário típico: ");
+                        System.out.print("Horário da alimentação: ");
                         animal[contAnimal][4] = entrada.next();
                         
                         contAnimal++;
@@ -276,7 +277,7 @@ public class Zoo_Main {
                         System.out.println("Nome popular do animal: " + animal[i][1]);
                         System.out.println("Tipo de alimentação: " + animal[i][2]);
                         System.out.println("Quantidade de alimento e frequência (Kg/dia): " + animal[i][3]);
-                        System.out.println("Horário típico: " + animal[i][4]);
+                        System.out.println("Horário da alimentação: " + animal[i][4]);
                         System.out.println("Operação realizada com sucesso!!!");
                         System.out.println("Aperte Enter para continuar...");
                         
@@ -306,7 +307,7 @@ public class Zoo_Main {
                         animal[i][2] = entrada.next();
                         System.out.print("Nova quantidade e frequência de alimentação (Kg/dia)[" + animal[i][3] + "]: ");
                         animal[i][3] = entrada.next();
-                        System.out.print("Horário da típico [" + animal[i][4] + "]: ");
+                        System.out.print("Horário da alimentação: [" + animal[i][4] + "]: ");
                         animal[i][4] = entrada.next();
                         System.out.println("Operação realizada com Sucesso!!!");
                         System.out.println("Aperte Enter para continuar...");
@@ -330,7 +331,7 @@ public class Zoo_Main {
                     System.out.println("Nome popular do animal: " + animal[i][1]);
                     System.out.println("Tipo de alimentação: " + animal[i][2]);
                     System.out.println("Quantidade e frequência de alimentação (KG/dia): " + animal[i][3]);
-                    System.out.println("Horário da típico: " + animal[i][4] + "\n");
+                    System.out.println("Horário da alimentação: " + animal[i][4] + "\n");
                 }
 
                 System.out.println("Operação realizada com Sucesso!!!");

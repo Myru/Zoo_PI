@@ -1,5 +1,1 @@
-1	1 Urso Pardo	Uma vez por semana
-2	1 Panda Gigante	Uma vez a cada tres dias
-3	1 Leopardo das Neves	Uma vez a cada seis dias
-4	1 Lobo-Cinzento	Uma a cada quatro dias
-5	1 Gorila das Montanhas	Uma vez por semana
+1	1 Animal	2 vezes ao dia
