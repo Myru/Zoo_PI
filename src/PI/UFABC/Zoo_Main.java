@@ -201,7 +201,8 @@ public class Zoo_Main {
                     
                     while (i <= contAnimal && controle == 0) {
                         if (auxiliar.equals(animal[i][0])) {
-                            System.out.println("CÓDIGO INVÁLIDO!!!");
+                            System.out.println("CÓDIGO INVÁLIDO!!!\nJá existe um animal com este código.");
+                            System.out.println("Aperte Enter para continuar...");
                             controle = 1;
                         }
                         else if (i == contAnimal) {
@@ -252,10 +253,12 @@ public class Zoo_Main {
                         controle = 1;
                         
                         System.out.println("REGISTRO APAGADO COM SUCESSO!");
+                        System.out.println("Aperte Enter para continuar...");
 
                     } 
                     else if (i == contAnimal) {
-                        System.out.println("REGISTRO NÃO EXISTE!!!");
+                        System.out.println("ESSE NÚMERO DE REGISTRO NÃO EXISTE!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -281,7 +284,8 @@ public class Zoo_Main {
                         
                     } 
                     else if (i == contAnimal) {
-                        System.out.println("REGISTRO NÃO EXISTE!!!");
+                        System.out.println("NÚMERO DE CHAMADA NÃO EXISTE!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -311,6 +315,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contAnimal) {
                         System.out.println("REGISTRO NÃO ENCONTRADO!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -370,6 +375,7 @@ public class Zoo_Main {
                     while (i <= contFuncionario && controle == 0) {
                         if (auxiliar.equals(funcionario[i][0])) {
                             System.out.println("JÁ EXISTE ESTE Nº DE CPF NO CADASTRO!");
+                            System.out.println("Aperte Enter para continuar...");
                             controle = 1;
                         } 
                         else if (i == contFuncionario) {
@@ -438,10 +444,12 @@ public class Zoo_Main {
                         contFuncionario--;
                         controle = 1;
                         System.out.println("FUNCIONÁRIO RETIRADO!!!");
+                        System.out.println("Aperte Enter para continuar...");
 
                     } 
                     else if (i == contFuncionario) {
                         System.out.println("CPF NÃO EXISTE NA MATRIZ!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -465,6 +473,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contFuncionario) {
                         System.out.println("CPF NÃO CADASTRADO!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -513,6 +522,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contFuncionario) {
                         System.out.println("CPF NÃO CADASTRADO!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -712,6 +722,7 @@ public class Zoo_Main {
                         } 
                         else if (i == contAnimal) {
                             System.out.println("REGISTRO NÃO ENCONTRADO!!!");
+                            System.out.println("Aperte Enter para continuar...");
                         }
                         i++;
                     }
@@ -730,6 +741,7 @@ public class Zoo_Main {
                             } 
                             else if (i == contFuncionario) {
                                 System.out.println("CADASTRO NÃO ENCONTRADO!!!");
+                                System.out.println("Aperte Enter para continuar...");
                             }
                             i++;
                         }
@@ -856,6 +868,7 @@ public class Zoo_Main {
                         } 
                         else if (i == contAnimal) {
                             System.out.println("CADASTRO NÃO ENCONTRADO!!!");
+                            System.out.println("Aperte Enter para continuar...");
                         }
                         i++;
                     }
@@ -869,10 +882,11 @@ public class Zoo_Main {
 
                         while (i <= contFuncionario && controle == 0) {
                             if (aux2.equals(funcionario[i][0])) {
-                                controle = 1; // cpf existe
+                                controle = 1;
                             } 
                             else if (i == contFuncionario) {
                                 System.out.println("CADASTRO NÃO ENCONTRADO!!!");
+                                System.out.println("Aperte Enter para continuar...");
                             }
                             i++;
                         }
@@ -1023,6 +1037,7 @@ public class Zoo_Main {
                 if (controle == 0)
                 {
                     System.out.println("REGISTRO NÃO ENCONTRADO!!!");
+                    System.out.println("Aperte Enter para continuar...");
                 } else {
                     System.out.println("Operação realizada com Sucesso!!!");
                     System.out.println("Aperte Enter para continuar...");
@@ -1058,6 +1073,7 @@ public class Zoo_Main {
                         } 
                         else if (i == contRecinto) {
                             System.out.println("REGISTRO NÃO ENCONTRADO!!!");
+                            System.out.println("Aperte Enter para continuar...");
                         }
                         i++;
                     }
