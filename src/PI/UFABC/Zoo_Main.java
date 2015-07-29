@@ -343,6 +343,7 @@ public class Zoo_Main {
 
             if (opmenu != 1 && opmenu != 2 && opmenu != 3 && opmenu != 4 && opmenu != 5 && opmenu != 6) {
                 System.out.println("OPÇÃO INVÁLIDA!!!");
+                System.out.println("Aperte Enter para continuar...");
                 entrada.next();
             }
         } while (opmenu != 6);
@@ -516,6 +517,7 @@ public class Zoo_Main {
                         } else
                         {
                             System.out.println("FUNÇÃO INVÁLIDA!!!");
+                            System.out.println("Aperte Enter para continuar...");
                         }
 
                         controle = 1;
@@ -548,6 +550,7 @@ public class Zoo_Main {
             
             if (opmenu != 1 && opmenu != 2 && opmenu != 3 && opmenu != 4 && opmenu != 5 && opmenu != 6) {
                 System.out.println("OPÇÃO INVÁLIDA!!!");
+                System.out.println("Aperte Enter para continuar...");
                 entrada.next();
             }
         } while (opmenu != 6);
@@ -624,6 +627,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contRecinto) {
                         System.out.println("NÃO EXISTE RECINTO COM O CÓDIGO FORNECIDO!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -645,6 +649,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contRecinto) {
                         System.out.println("RECINTO NÃO CADASTRADO!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -669,6 +674,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contRecinto) {
                         System.out.println("RECINTO NÃO CADASTRADO!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -689,6 +695,7 @@ public class Zoo_Main {
             }
             if (opmenu != 1 && opmenu != 2 && opmenu != 3 && opmenu != 4 && opmenu != 5 && opmenu != 6) {
                 System.out.println("OPÇÃO INVÁLIDA!!!");
+                System.out.println("Aperte Enter para continuar...");
                 entrada.next();
             }
         } while (opmenu != 6);
@@ -802,6 +809,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contAlimentacao) {
                         System.out.println("CÓDIGO FORNECIDO NÃO CADASTRADO NO SISTEMA!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -852,6 +860,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contAlimentacao) {
                         System.out.println("CADASTRO NÃO EXISTE");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -933,6 +942,7 @@ public class Zoo_Main {
 
             if (opmenu != 1 && opmenu != 2 && opmenu != 3 && opmenu != 4 && opmenu != 5 && opmenu != 6) {
                 System.out.println("OPÇÃO INVÁLIDA!!!");
+                System.out.println("Aperte Enter para continuar...");
                 entrada.next();
             }
         } while (opmenu != 6);
@@ -968,6 +978,7 @@ public class Zoo_Main {
                         } 
                         else if (i == contRecinto) {
                             System.out.println("RECINTO NÃO CADASTRADO!!!");
+                            System.out.println("Aperte Enter para continuar...");
                         }
                         i++;
                     }
@@ -1014,6 +1025,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contLimpeza) {
                         System.out.println("CÓDIGO FORNECIDO NÃO ESTA CADASTRADO NO SISTEMA!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -1057,6 +1069,7 @@ public class Zoo_Main {
                     } 
                     else if (i == contLimpeza) {
                         System.out.println("RECINTO NÃO CADASTRADO!!!");
+                        System.out.println("Aperte Enter para continuar...");
                     }
                     i++;
                 }
@@ -1107,6 +1120,7 @@ public class Zoo_Main {
 
             if (opmenu != 1 && opmenu != 2 && opmenu != 3 && opmenu != 4 && opmenu != 5 && opmenu != 6) {
                 System.out.println("OPÇÃO INVÁLIDA!!!");
+                System.out.println("Aperte Enter para continuar...");
                 entrada.next();
             }
         } while (opmenu != 6);
@@ -1159,6 +1173,7 @@ public class Zoo_Main {
             
             if (opmenu != 1 && opmenu != 2 && opmenu != 3 && opmenu != 4 && opmenu != 5 && opmenu != 6 && opmenu != 7) {
                 System.out.println("OPÇÃO INVÁLIDA!!!");
+                System.out.println("Aperte Enter para continuar...");
                 entrada.next();
             }
             System.out.println("\n\n\n");
