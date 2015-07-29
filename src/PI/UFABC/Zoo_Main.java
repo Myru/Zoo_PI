@@ -686,18 +686,18 @@ public class Zoo_Main {
             }
 
             if (opmenu == 3) { // buscar jaula
-                System.out.println("\nBUSCAR JAULA");
-                System.out.print("Digite o numero da jaula a ser buscada: ");
+                System.out.println("\nPROCURAR RECINTO");
+                System.out.print("Digite o numero do recinto a ser buscada: ");
                 aux = teclado.next();
 
                 while (i <= contJaula && flag == 0) {
                     if (aux.equals(jaula[i][0])) {
-                        System.out.println("Numero de animais enjaulados: " + jaula[i][1]);
+                        System.out.println("Numero de animais no recinto: " + jaula[i][1]);
                         System.out.println("Frequencia de limpeza: " + jaula[i][2]);
-                        System.out.println("Operacao realizada com exito!");
+                        System.out.println("Operacao realizada com sucesso!!!");
                         flag = 1;
                     } else if (i == contJaula) {
-                        System.out.println("JAULA NÃO EXISTE");
+                        System.out.println("RECINTO NAO CADASTRADO");
                     }
                     i++;
                 }
@@ -705,21 +705,21 @@ public class Zoo_Main {
             }
 
             if (opmenu == 4) { // alterar jaula
-                System.out.println("\nALTERAR JAULA");
-                System.out.print("Digite o numero da jaula a ser alterado: ");
+                System.out.println("\nALTERAR CADASTRO");
+                System.out.print("Digite o numero do recinto a ser alterado: ");
                 aux = teclado.next();
 
                 while (i <= contJaula && flag == 0) {
                     if (aux.equals(jaula[i][0])) {
-                        System.out.print("Novo Numero de animais enjaulados: [" + jaula[i][1] + "]: ");
+                        System.out.print("Novo Numero de animais no recinto: [" + jaula[i][1] + "]: ");
                         jaula[i][1] = teclado.next();
                         System.out.print("Nova frequencia de limpeza [" + jaula[i][2] + "]: ");
                         jaula[i][2] = teclado.next();
-                        System.out.println("Operacao realizada com exito!");
+                        System.out.println("Operacao realizada com sucesso!!!");
                         flag = 1;
 
                     } else if (i == contJaula) {
-                        System.out.println("JAULA NÃO EXISTE");
+                        System.out.println("RECINTO NAO CADASTRADO");
                     }
                     i++;
                 }
@@ -727,14 +727,14 @@ public class Zoo_Main {
             }
 
             if (opmenu == 5) { // exibe todos em um laco
-                System.out.println("\nEXIBIR JAULAS");
+                System.out.println("\nEXIBIR CADASTROS");
 
                 for (i = 0; i < contJaula; i++) {
-                    System.out.println("Numero da jaula: " + jaula[i][0]);
+                    System.out.println("Numero do recinto: " + jaula[i][0]);
                     System.out.println("Numero de animais enjaulados: " + jaula[i][1]);
                     System.out.println("Frequencia de limpeza: " + jaula[i][2] + "\n");
                 }
-                System.out.println("Operacao concluida com exito!");
+                System.out.println("Operacao concluida com sucesso!");
                 teclado.next();
             }
             if (opmenu != 1 && opmenu != 2 && opmenu != 3 && opmenu != 4 && opmenu != 5 && opmenu != 6) {
@@ -752,7 +752,7 @@ public class Zoo_Main {
             flag = 0;
 
             System.out.println("\n\n\n");
-            System.out.println("CONTROLE DE ALIMENTACAO");
+            System.out.println("MENU CUIDADOS E ALIMENTACAO");
             System.out.println("1- Novo registro");
             System.out.println("2- Excluir registro");
             System.out.println("3- Buscar Registro");
@@ -783,7 +783,7 @@ public class Zoo_Main {
                         if (aux.equals(animal[i][0])) {
                             flag = 1; // flag indicando que o animal foi encontrado
                         } else if (i == contAni) {
-                            System.out.println("ANIMAL NÃO EXISTE");
+                            System.out.println("ERRO!!! REGISTRO NÃO ENCONTRADO");
                         }
                         i++;
                     }
@@ -804,7 +804,7 @@ public class Zoo_Main {
                             if (aux2.equals(func[i][0]) && func[i][3].equals("Funcionario do zoologico")) {
                                 flag = 1; // flag indica que o funcionario foi encontrado
                             } else if (i == contFunc) {
-                                System.out.println("FUNCIONARIO NÃO EXISTE");
+                                System.out.println("ERRO !!! CADASTRO NÃO ENCONTRADO");
                             }
                             i++;
                         }
@@ -848,8 +848,8 @@ public class Zoo_Main {
             }
 
             if (opmenu == 2) { // excluir registro
-                System.out.println("\nEXCLUIR REGISTRO");
-                System.out.print("Digite o numero do registro a ser excluido: ");
+                System.out.println("\nAPAGAR REGISTRO");
+                System.out.print("Digite o numero do registro a ser apagado: ");
                 aux = teclado.next();
 
                 while (i <= contAlimenta && flag == 0) {
@@ -868,10 +868,10 @@ public class Zoo_Main {
                         }
                         contAlimenta--;
                         flag = 1;
-                        System.out.println("REGISTRO RETIRADO");
+                        System.out.println("REGISTRO APAGADO");
 
                     } else if (i == contAlimenta) {
-                        System.out.println("CÓDIGO FORNECIDO NÃO ESTA CADASTRADO NO SISTEMA");
+                        System.out.println("CÓDIGO FORNECIDO NÃO CADASTRADO NO SISTEMA");
                     }
                     i++;
                 }
@@ -911,16 +911,16 @@ public class Zoo_Main {
 
                 if (flag == 0) // se nenhum registro foi encontrado ...
                 {
-                    System.out.println("NENHUM REGISTRO COM ESSA DATA");
+                    System.out.println("NENHUM REGISTRO COM ESSA DATA FOI ENCONTRADO");
                 } else {
-                    System.out.println("Operacao realizada com exito!");
+                    System.out.println("Operacao realizada com sucesso!!!");
                 }
                 teclado.next();
             }
 
             if (opmenu == 4) { // Alterar registro
-                System.out.println("\nALTERAR REGISTRO");
-                System.out.print("Digite o numero do registro a ser alterado: ");
+                System.out.println("\nALTERAR CADASTRO");
+                System.out.print("Digite o numero do cadastro a ser alterado: ");
                 aux = teclado.next();
 
                 // É feita uma busca para identificar se o numero do registro é valido
@@ -928,7 +928,7 @@ public class Zoo_Main {
                     if (aux.equals(alimenta[i][0])) {
                         flag = 1; // codigo existe
                     } else if (i == contAlimenta) {
-                        System.out.println("REGISTRO NÃO EXISTE");
+                        System.out.println("CADASTRO NÃO EXISTE");
                     }
                     i++;
                 }
@@ -937,7 +937,7 @@ public class Zoo_Main {
                     j = i - 1;// para deixar na posição correta de alteração
                     i = 0;
                     flag = 0;
-                    System.out.print("Novo codigo do animal alimentado [" + alimenta[j][1] + "]: ");
+                    System.out.print("Novo codigo do animal [" + alimenta[j][1] + "]: ");
                     aux = teclado.next();
 
                     //Novamente é feita uma busca para saber se o codigo digitado existe
@@ -945,7 +945,7 @@ public class Zoo_Main {
                         if (aux.equals(animal[i][0])) {
                             flag = 1; // codigo existe
                         } else if (i == contAni) {
-                            System.out.println("ANIMAL NÃO EXISTE");
+                            System.out.println("ERRO CADASTRO NAO ENCONTRADO!!!");
                         }
                         i++;
                     }
@@ -962,7 +962,7 @@ public class Zoo_Main {
                             if (aux2.equals(func[i][0])) {
                                 flag = 1; // cpf existe
                             } else if (i == contFunc) {
-                                System.out.println("CPF NÃO EXISTE");
+                                System.out.println("ERRO!!! CADASTRO NAO ENCONTRADO");
                             }
                             i++;
                         }
@@ -990,7 +990,7 @@ public class Zoo_Main {
             }
 
             if (opmenu == 5) { // menu Exibir
-                System.out.println("\nMOSTRAR REGISTROS");
+                System.out.println("\nEXIBIR REGISTROS");
                 for (i = 0; i < contAlimenta; i++) {
                     System.out.println("Numero de Controle: " + alimenta[i][0]);
                     System.out.println("Codigo do Animal: " + alimenta[i][1]);
@@ -1001,7 +1001,7 @@ public class Zoo_Main {
                     System.out.println("Hora: " + alimenta[i][6]);
                     System.out.println("OBS: " + alimenta[i][7] + "\n");
                 }
-                System.out.println("Operacao concluida com exito!");
+                System.out.println("Operacao concluida com Sucesso!!!");
                 teclado.next();
             }
 
@@ -1019,13 +1019,13 @@ public class Zoo_Main {
             flag = 0;
 
             System.out.println("\n\n\n");
-            System.out.println("CONTROLE DE LIMPEZA");
+            System.out.println("MENU LIMPEZA");
             System.out.println("1- Novo registro");
-            System.out.println("2- Excluir registro");
-            System.out.println("3- Buscar Registro");
+            System.out.println("2- Apagar registro");
+            System.out.println("3- Procurar Registro");
             System.out.println("4- Alterar Registro");
             System.out.println("5- Exibir Registros");
-            System.out.println("6- Sair");
+            System.out.println("6- Voltar");
             System.out.print("Escolha opcao desejada: ");
             opmenu = teclado.nextInt();
 
@@ -1039,13 +1039,13 @@ public class Zoo_Main {
                     /* A mesma logica de busca do void menuAlimenta se aplica aqui,
                      * mas dessa vez a pesquisa sera pelo codigo da jaula na matriz "jaula"
                      */
-                    System.out.print("Codigo da jaula limpa: ");
+                    System.out.print("Codigo do recinto limpo: ");
                     aux = teclado.next();
                     while (i <= contJaula && flag == 0) {
                         if (aux.equals(jaula[i][0])) {
                             flag = 1; // indica que a jaula foi encontrada
                         } else if (i == contJaula) {
-                            System.out.println("JAULA NÃO EXISTE");
+                            System.out.println("ERRO!!! RECINTO NAO CADASTRADO");
                         }
                         i++;
                     }
@@ -1062,7 +1062,7 @@ public class Zoo_Main {
 
                         contCodLimp++;
                         contLimp++;
-                        System.out.println("Operacao concluida com exito!");
+                        System.out.println("Operacao concluida com sucesso!!");
                     }
                 } else {
                     System.out.println("MATRIZ CHEIA");
@@ -1087,7 +1087,7 @@ public class Zoo_Main {
                         }
                         contLimp--;
                         flag = 1;
-                        System.out.println("REGISTRO RETIRADO");
+                        System.out.println("REGISTRO APAGADO");
 
                     } else if (i == contLimp) {
                         System.out.println("CÓDIGO FORNECIDO NÃO ESTA CADASTRADO NO SISTEMA");
@@ -1098,9 +1098,9 @@ public class Zoo_Main {
             }
 
             if (opmenu == 3) { // Buscar registro
-                System.out.println("\nBUSCAR REGISTRO");
+                System.out.println("\nPROCURAR REGISTRO");
                 //Busca feita pela jaula
-                System.out.print("Digite a jaula ser buscada: ");
+                System.out.print("Digite o recinto a ser buscado: ");
                 aux = teclado.next();
 
                 // Exibira todos os registros de limpeza da jaula buscada
@@ -1116,9 +1116,9 @@ public class Zoo_Main {
 
                 if (flag == 0) // se nenhum registro foi encontrado
                 {
-                    System.out.println("NENHUM REGISTRO DESSA JAULA");
+                    System.out.println("REGISTRO NAO ENCONTRADO");
                 } else {
-                    System.out.println("Operacao realizada com exito!");
+                    System.out.println("Operacao realizada com Sucesso!!!");
                 }
                 teclado.next();
             }
@@ -1133,7 +1133,7 @@ public class Zoo_Main {
                     if (aux.equals(limpeza[i][0])) {
                         flag = 1; // registro encontrada
                     } else if (i == contLimp) {
-                        System.out.println("JAULA NÃO EXISTE");
+                        System.out.println("RECINTO NAO CADASTRADO");
                     }
                     i++;
                 }
@@ -1143,13 +1143,13 @@ public class Zoo_Main {
                     i = 0;
                     flag = 0;
                     // Busca para descobrir se o codigo da jaula é valido
-                    System.out.print("Novo codigo da jaula limpa[" + limpeza[j][1] + "]: ");
+                    System.out.print("Novo codigo do recinto limpo[" + limpeza[j][1] + "]: ");
                     aux = teclado.next();
                     while (i <= contJaula && flag == 0) {
                         if (aux.equals(jaula[i][0])) {
                             flag = 1; // jaula encontrada
                         } else if (i == contJaula) {
-                            System.out.println("JAULA NÃO EXISTE");
+                            System.out.println("REGISTRO NÃO ENCONTRADO");
                         }
                         i++;
                     }
@@ -1160,7 +1160,7 @@ public class Zoo_Main {
                         limpeza[j][2] = teclado.next();
                         System.out.print("Novo horario [" + limpeza[j][3] + "]: ");
                         limpeza[j][3] = teclado.next();
-                        System.out.println("Operacao concluida com exito!");
+                        System.out.println("Operacao concluida com sucesso!");
                     }
                 }
                 teclado.next();
@@ -1174,7 +1174,7 @@ public class Zoo_Main {
                     System.out.println("Data: " + limpeza[i][2]);
                     System.out.println("Hora: " + limpeza[i][3] + "\n");
                 }
-                System.out.println("Operacao concluida com exito!");
+                System.out.println("Operacao concluida com Sucesso!!!");
                 teclado.next();
             }
 
@@ -1187,12 +1187,12 @@ public class Zoo_Main {
 
     // Este void tem a funcionalidade de escrever na tela o menu principal
     public static void menuPrincipal() {
-        System.out.println("SISTEMA DE CONTROLE DE ZOOLOGICO 1.0");
-        System.out.println("1- Controle de Animais");
-        System.out.println("2- Controle de Parceiros e Funcionarios");
-        System.out.println("3- Controle de Jaulas");
-        System.out.println("4- Controle de Alimentacao");
-        System.out.println("5- Controle de Limpeza");
+        System.out.println("ZOOMIGO by Zoosoft");
+        System.out.println("1- Menu Animais");
+        System.out.println("2- Menu Funcionarios");
+        System.out.println("3- Menu Recinto");
+        System.out.println("4- Menu Alimentação");
+        System.out.println("5- Menu Limpeza");
         System.out.println("6- Salvar");
         System.out.println("7- Sair");
         System.out.print("Escolha a opcao desejada: ");
